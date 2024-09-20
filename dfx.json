@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "dirty_backend": {
+      "main": "src/dirty_backend/main.mo",
+      "type": "motoko"
+    },
+    "dirty_frontend": {
+      "dependencies": [
+        "dirty_backend"
+      ],
+      "source": [
+        "src/dirty_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "dirty_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
