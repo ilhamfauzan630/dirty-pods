@@ -3,6 +3,13 @@ body {
   font-size: 1.5rem;
 }
 
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin: 20px 0;
+}
+
 img {
   max-width: 50vw;
   max-height: 25vw;
@@ -23,7 +30,6 @@ form {
 button[type="submit"] {
   padding: 5px 20px;
   margin: 10px auto;
-  float: right;
 }
 
 #greeting {
