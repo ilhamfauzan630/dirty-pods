@@ -42,6 +42,7 @@
 import { renderLandingPage } from './LandingPage';
 import { renderElectionPage } from './ElectionPage';
 import { renderNavBar } from './NavBar';
+import { renderFooter } from './Footer';
 
 class App {
   constructor() {
@@ -51,6 +52,7 @@ class App {
   // Inisialisasi aplikasi dengan merender navbar dan halaman default
   #init() {
     renderNavBar(this.#navigate.bind(this));
+    renderFooter()
     this.#navigate('landing-page'); // default halaman pertama
   }
 
