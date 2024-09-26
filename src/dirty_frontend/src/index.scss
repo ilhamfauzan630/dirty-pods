@@ -41,3 +41,146 @@ button[type="submit"] {
 #greeting:empty {
   display: none;
 }
+
+
+// // tampilan landing-page
+
+// /* Navbar */
+// nav ul {
+//   list-style: none;
+//   display: flex;
+//   justify-content: flex-end;
+//   background-color: #004466;
+//   padding: 10px;
+// }
+
+// nav ul li {
+//   margin-left: 20px;
+// }
+
+// nav ul li a {
+//   color: white;
+//   text-decoration: none;
+// }
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background-color: #002a4e;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+}
+
+.hero-image {
+  width: 300px;
+  height: auto;
+  margin-right: 50px;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+}
+
+.hero-text p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.btn-primary {
+  background-color: #26a69a;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #ff9800;
+  color: white;
+}
+
+/* Features Section */
+.features {
+  text-align: center;
+  padding: 50px;
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+}
+
+.feature-item {
+  width: 250px;
+  text-align: center;
+}
+
+.feature-item img {
+  width: 50px;
+  height: auto;
+}
+
+/* How It Works Section */
+.how-it-works {
+  text-align: center;
+  padding: 50px;
+}
+
+.steps-grid {
+  display: flex;
+  justify-content: space-around;
+}
+
+.step {
+  width: 250px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #004466;
+  color: white;
+}
+
+footer .social-media p {
+  margin-bottom: 10px;
+}
+
+footer .social-media a img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.footer-links div h4 {
+  margin-bottom: 10px;
+}
+
+.footer-links div a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+}
