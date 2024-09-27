@@ -2,24 +2,19 @@ body {
     font-family: Arial, sans-serif;
     color: white;
     background: linear-gradient(#001f3f, #0B2F9F); /* Mengubah background-color menjadi background */
-    padding-top: 50px;
 }
 
 /* Navbar */
 nav {
-    position: absolute; /* Use absolute positioning */
-    right: 0; /* Align it to the right of the screen */
     top: 0px; /* Adjust distance from the top of the screen */
-    margin-bottom: 20px;
+    gap: 1em;
+    margin: 30px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: flex-end;
-    background-color: transparent; /* Transparent background */
-    padding: 10px;
-    margin: 0;/* Remove default margin */
 }
 
 nav ul li {
@@ -27,18 +22,19 @@ nav ul li {
 }
 
 nav ul li a {
+    font-size: 16px;
     text-decoration: none;
     color: white;
 }
-
 
 /* Hero Section */
 .hero {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 50px;
     background-color: transparent; /* Membuat background hero mengikuti body */
+    margin-top: 30px;
+    height: auto;
 }
 
 .hero-content {
@@ -47,7 +43,7 @@ nav ul li a {
 }
 
 .hero-image {
-    width: 300px;
+    width: 600px;
     height: auto;
     margin-right: 50px;
 }
@@ -84,8 +80,11 @@ nav ul li a {
 
 /* Features Section */
 .features {
+    top: 50px;
     text-align: center;
+    font-size: 24px;
     padding: 50px;
+    margin-top: 170px;
     background-color: transparent; /* Membuat background features mengikuti body */
 }
 
@@ -96,29 +95,56 @@ nav ul li a {
 }
 
 .feature-item {
+    display: block;
     width: 250px;
     text-align: center;
+    font-size: 16px;
 }
 
 .feature-item img {
-    width: 50px;
+    margin-top: 20px;
+    width: 250px;
     height: auto;
+}
+
+.feature-item h3 {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.feature-item p {
+    margin-top: 20px;
+    margin-left: 10px;
 }
 
 /* How It Works Section */
 .how-it-works {
     text-align: center;
     padding: 50px;
+    margin-top: 170px;
+    font-size: 24px;
     background-color: transparent; /* Membuat background how-it-works mengikuti body */
 }
 
 .steps-grid {
     display: flex;
     justify-content: space-around;
+    padding-top: 30px;
 }
 
 .step {
+    font-size: 16px;
     width: 250px;
+}
+
+.step h3 {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.step p {
+    margin-top: 20px;
+    margin-left: 10px;
 }
 
 /* Footer */
@@ -130,12 +156,14 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     padding: 20px;
+    margin-top: 300px;
     background-color: #004466; /* Set background color */
     color: white;
 }
 
-footer .logoteam img {
-    width: 300px; /* Adjust logo size */
+footer .logoteam a img {
+    width: 300px;
+    height: auto;
 }
 
 /* Social Media Section */
@@ -146,6 +174,7 @@ footer .social-media {
 }
 
 footer .social-media p {
+    font-size: 16px;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -156,7 +185,10 @@ footer .socmed-img{
     gap: 50px; /* Space between icons */
 }
 
-
+footer .socmed-img a img {
+    width: 30px;
+    height: auto;
+}
 
 /* Footer Links */
 .footer-links {
@@ -167,6 +199,7 @@ footer .socmed-img{
 
 .footer-links div h4 {
     margin-bottom: 10px;
+    font-size: 20px;
 }
 
 .footer-links div a {
@@ -174,6 +207,7 @@ footer .socmed-img{
     text-decoration: none;
     display: block;
     margin-bottom: 5px;
+    font-size: 16px;
 }
 
 .footer-links div a:hover {
