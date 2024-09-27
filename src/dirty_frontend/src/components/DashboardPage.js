@@ -2,7 +2,7 @@ import { html, render } from 'lit-html';
 import './styles/dashboard.css';
 
 
-export const renderDashboardPage = () => {
+export const renderDashboardPage = (navigate) => {
   let body = html`
     <!DOCTYPE html>
     <html lang="en">
@@ -45,7 +45,7 @@ export const renderDashboardPage = () => {
                     <p class="vote-title">[Title Vote]</p>
                     <p class="vote-tags">#tag #tag #tag</p>
                     <p class="vote-end">End: 27 Sept 2024, 10:29 PM</p>
-                    <button class="join-btn">Join Vote</button>
+                    <button class="join-btn" id="join-btn1">Join Vote</button>
                     <p class="voter-count">👥 78</p>
                 </div>
                 <!-- Repeat end -->
@@ -58,4 +58,9 @@ export const renderDashboardPage = () => {
 
   // Pastikan bahwa elemen root ada di HTML utama Anda
   render(body, document.getElementById('root'));
+
+  document.getElementById('join-btn1').addEventListener('click', () => {
+    console.log('Get Started button clicked');
+    navigate('detail-page');
+  });
 };

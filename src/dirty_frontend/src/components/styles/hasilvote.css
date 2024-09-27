@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;400;700&display=swap");
+
+.container-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.container-item {
+    display: flex;
+    align-items: center;
+    justify-content: left; /* Gambar dan label akan berada di tengah */
+    margin: 10px 0;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid #296968;
+    border-radius: 8px;
+    padding: 10px;
+    transition: 0.4s ease-in-out 0s;
+    width: 90%;
+}
+
+.container-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.container-item .container-label {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.container-item.active {
+    border-color: #296968;
+}
+
+.container-item:active {
+    border-color: #1e4e4d;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.progress-bar {
+    width: 0;
+    height: 20px;
+    background-color: #4caf50; /* Warna hijau untuk progress bar */
+    border-radius: 5px;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    transition: width 0.3s ease;
+}
