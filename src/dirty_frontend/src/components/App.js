@@ -41,34 +41,41 @@
 
 import { renderLandingPage } from './LandingPage';
 import { renderElectionPage } from './ElectionPage';
-import { renderNavBar } from './NavBar';
-import { renderFooter } from './Footer';
+import { renderDashboardPage } from './DashboardPage';
+
 
 class App {
   constructor() {
     this.#init();
   }
 
-  // Inisialisasi aplikasi dengan merender navbar dan halaman default
+  // Inisialisasi aplikasi dengan merender halaman default
   #init() {
-    renderNavBar(this.#navigate.bind(this));
-    renderFooter()
-    this.#navigate('landing-page'); // default halaman pertama
+    this.#navigate('landing-page'); // Set LandingPage sebagai halaman pertama
   }
 
   // Fungsi navigasi untuk berpindah halaman
   #navigate(page) {
     switch (page) {
       case 'landing-page':
-        renderLandingPage();
+        renderLandingPage(this.#navigate.bind(this)); // Berikan fungsi navigasi ke LandingPage
         break;
       case 'election-page':
         renderElectionPage();
         break;
+      case 'dashboard-page':
+        renderDashboardPage();
+        break;
       default:
-        renderLandingPage();
+        renderLandingPage(this.#navigate.bind(this));
     }
   }
 }
+
+// Ekspor App dan fungsi navigate
+export const navigate = (page) => {
+  const app = new App();
+  app.navigate(page);
+};
 
 export default App;
