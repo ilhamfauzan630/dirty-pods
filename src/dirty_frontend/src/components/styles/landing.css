@@ -1,0 +1,181 @@
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background: linear-gradient(#001f3f, #0B2F9F); /* Mengubah background-color menjadi background */
+    padding-top: 50px;
+}
+
+/* Navbar */
+nav {
+    position: absolute; /* Use absolute positioning */
+    right: 0; /* Align it to the right of the screen */
+    top: 0px; /* Adjust distance from the top of the screen */
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    background-color: transparent; /* Transparent background */
+    padding: 10px;
+    margin: 0;/* Remove default margin */
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: transparent; /* Membuat background hero mengikuti body */
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+}
+
+.hero-image {
+    width: 300px;
+    height: auto;
+    margin-right: 50px;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+}
+
+.hero-text p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-primary {
+    background-color: #26a69a;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #ff9800;
+    color: white;
+}
+
+/* Features Section */
+.features {
+    text-align: center;
+    padding: 50px;
+    background-color: transparent; /* Membuat background features mengikuti body */
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.feature-item {
+    width: 250px;
+    text-align: center;
+}
+
+.feature-item img {
+    width: 50px;
+    height: auto;
+}
+
+/* How It Works Section */
+.how-it-works {
+    text-align: center;
+    padding: 50px;
+    background-color: transparent; /* Membuat background how-it-works mengikuti body */
+}
+
+.steps-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.step {
+    width: 250px;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    position: relative; /* Optional: can use absolute or fixed if needed */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #004466; /* Set background color */
+    color: white;
+}
+
+footer .logoteam img {
+    width: 300px; /* Adjust logo size */
+}
+
+/* Social Media Section */
+footer .social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .social-media p {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+footer .socmed-img{
+    display: flex;
+    flex-direction: row;
+    gap: 50px; /* Space between icons */
+}
+
+
+
+/* Footer Links */
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.footer-links div h4 {
+    margin-bottom: 10px;
+}
+
+.footer-links div a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-links div a:hover {
+    text-decoration: underline;
+}
