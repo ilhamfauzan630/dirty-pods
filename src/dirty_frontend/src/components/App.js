@@ -43,6 +43,7 @@ import { renderLandingPage } from './LandingPage';
 import { renderElectionPage } from './ElectionPage';
 import { renderDashboardPage } from './DashboardPage';
 import { renderDetailvotePage } from './DetailvotePage';
+import { renderHasilvotePage } from './HasilvotePage';
 
 
 class App {
@@ -69,6 +70,9 @@ class App {
         break;
       case 'detail-page':
         renderDetailvotePage(this.#navigate.bind(this));
+        break;
+      case 'hasil-page':
+        renderHasilvotePage(this.#navigate.bind(this));
         break;
       default:
         renderLandingPage(this.#navigate.bind(this));
