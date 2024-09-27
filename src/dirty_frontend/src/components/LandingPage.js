@@ -1,5 +1,6 @@
 import { html, render } from 'lit-html';
 import './styles/landing.css';
+
 import imgvote from './../../assets/mainpict.png'
 import shield from './../../assets/shield.png'
 import glasseye from './../../assets/glasseye.png'
@@ -39,7 +40,7 @@ export const renderLandingPage = (navigate) => {
             <p>Join the voting revolution using blockchain technology. Easy, safe and transparent.</p>
             <div class="hero-buttons">
               <button class="btn-primary" id="get-started-btn">Get Started</button>
-              <button class="btn-secondary">Learn More</button>
+              <button class="btn-secondary" id="more-info-btn">Learn More</button>
             </div>
           </div>
         </div>
@@ -122,5 +123,13 @@ export const renderLandingPage = (navigate) => {
   render(body, document.getElementById('root'));
 
   // Tempat event listener setelah rendering
-  document.getElementById('get-started-btn').addEventListener('click', () => navigate('dashboard-page'));
+  document.getElementById('get-started-btn').addEventListener('click', () => {
+    console.log('Get Started button clicked');
+    navigate('dashboard-page');
+  });
+  
+  document.getElementById('more-info-btn').addEventListener('click', () => {
+    console.log('More Info button clicked');
+    navigate('detail-page');
+  });
 };
