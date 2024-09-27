@@ -1,11 +1,14 @@
 import { html, render } from 'lit-html';
+import './styles/landing.css';
 
 export const renderNavBar = (navigate) => {
   let nav = html`
+    <!-- Navbar -->
     <nav>
-      <button id="nav-home">About</button>
-      <button id="nav-election">Contact</button>
-      <button id="nav-election">QnA</button>
+      <ul>
+        <button id="nav-home">Home</button>
+        <button id="nav-election">Election</button>
+      </ul>
     </nav>
   `;
   render(nav, document.getElementById('nav'));
