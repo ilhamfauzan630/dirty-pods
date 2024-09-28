@@ -1,43 +1,4 @@
-// import { html, render } from 'lit-html';
-// import { dirty_backend } from 'declarations/dirty_backend';
-// import logo from './logo2.svg';
-
-// class App {
-//   greeting = '';
-
-//   constructor() {
-//     this.#render();
-//   }
-
-//   #handleSubmit = async (e) => {
-//     e.preventDefault();
-//     const name = document.getElementById('name').value;
-//     this.greeting = await dirty_backend.greet(name);
-//     this.#render();
-//   };
-
-//   #render() {
-//     let body = html`
-//       <main>
-//         <img src="${logo}" alt="DFINITY logo" />
-//         <br />
-//         <br />
-//         <form action="#">
-//           <label for="name">Enter your name: &nbsp;</label>
-//           <input id="name" alt="Name" type="text" />
-//           <button type="submit">Click Me!</button>
-//         </form>
-//         <section id="greeting">${this.greeting}</section>
-//       </main>
-//     `;
-//     render(body, document.getElementById('root'));
-//     document
-//       .querySelector('form')
-//       .addEventListener('submit', this.#handleSubmit);
-//   }
-// }
-
-// export default App;
+// App.js
 
 import { renderLandingPage } from './LandingPage';
 import { renderElectionPage } from './ElectionPage';
@@ -45,40 +6,64 @@ import { renderDashboardPage } from './DashboardPage';
 import { renderDetailvotePage } from './DetailvotePage';
 import { renderHasilvotePage } from './HasilvotePage';
 
-
 class App {
   constructor() {
     this.#init();
   }
 
-  // Inisialisasi aplikasi dengan merender halaman default
+  // Inisialisasi aplikasi dengan setup event listeners dan router
   #init() {
-    this.#navigate('landing-page'); // Set LandingPage sebagai halaman pertama
+    this.#setupEventListeners();
+    this.#router(); // Render halaman awal berdasarkan URL
+  }
+
+  // Setup event listeners untuk link navigasi dan popstate
+  #setupEventListeners() {
+    // Menangani klik pada link navigasi dengan atribut data-link
+    document.body.addEventListener('click', (event) => {
+      const link = event.target.closest('a[data-link]');
+      if (link) {
+        event.preventDefault();
+        const href = link.getAttribute('href');
+        this.#navigate(href);
+      }
+    });
+
+    // Menangani event popstate untuk tombol Back/Forward
+    window.addEventListener('popstate', () => this.#router());
   }
 
   // Fungsi navigasi untuk berpindah halaman
-  #navigate(page) {
-    switch (page) {
-      case 'landing-page':
-        renderLandingPage(this.#navigate.bind(this)); // Berikan fungsi navigasi ke LandingPage
+  #navigate(path) {
+    // Menambahkan entri baru ke history
+    window.history.pushState({}, '', path);
+    this.#router();
+  }
+
+  // Router yang menentukan halaman yang akan dirender berdasarkan path
+  #router() {
+    const path = window.location.pathname;
+    switch (path) {
+      case '/':
+      case '/landing-page':
+        renderLandingPage(this.#navigate.bind(this));
         break;
-      case 'election-page':
+      case '/election-page':
         renderElectionPage(this.#navigate.bind(this));
         break;
-      case 'dashboard-page':
+      case '/dashboard-page':
         renderDashboardPage(this.#navigate.bind(this));
         break;
-      case 'detail-page':
+      case '/detailvote-page':
         renderDetailvotePage(this.#navigate.bind(this));
         break;
-      case 'hasil-page':
+      case '/hasilvote-page':
         renderHasilvotePage(this.#navigate.bind(this));
         break;
       default:
-        renderLandingPage(this.#navigate.bind(this));
+        renderLandingPage(this.#navigate.bind(this)); // Default ke LandingPage jika rute tidak dikenali
     }
   }
 }
-
 
 export default App;
