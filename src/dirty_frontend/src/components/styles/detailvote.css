@@ -1,0 +1,162 @@
+.detailpage1 {
+    width: 100vw;
+    height: 100vh;
+    color: black;
+    background-color: white;
+    position: absolute;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto; /* Tambahkan ini jika halaman mungkin terlalu panjang */
+}
+
+.vote-container {
+    background-color: white;
+    color: black;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    min-height: 300px; /* Ubah dari 400px agar lebih fleksibel */
+    height: auto; /* Pastikan height auto */
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 20px; /* Tambahkan padding untuk ruang dalam */
+    box-sizing: border-box; /* Pastikan padding tidak menambah lebar */
+}
+
+.vote-container h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.vote-container p {
+    margin: 10px 0;
+}
+
+.images {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.image-item {
+    position: relative;
+}
+
+.image-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.image-item .number {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.pickervote {
+    display: flex;
+    flex-direction: column;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300;400;700&display=swap");
+.radio-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Pastikan item di dalamnya berjajar vertikal */
+    width: 100%; /* Pastikan radio section mengisi lebar container */
+    margin-top: 20px; /* Berikan margin atas untuk jarak */
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.radio-item input[type="radio"] {
+    display: none;
+}
+
+.radio-item label {
+    display: block;
+    padding: 20px 60px;
+    background: transparent;
+    border: 2px solid #296968;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    min-width: 250px;
+    white-space: nowrap;
+    position: relative;
+    transition: 0.4s ease-in-out 0s;
+}
+
+.radio-item label:after,
+.radio-item label:before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.radio-item label:after {
+    height: 19px;
+    width: 19px;
+    border: 2px solid #296968;
+    left: 19px;
+    top: calc(50% - 12px);
+}
+
+.radio-item label:before {
+    background: #296968;
+    height: 20px;
+    width: 20px;
+    left: 21px;
+    top: calc(50%-5px);
+    transform: scale(5);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease-in-out 0s;
+}
+
+.radio-item input[type="radio"]:checked ~ label {
+    border-color: #296968;
+}
+
+.radio-item input[type="radio"]:checked ~ label::before {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.hmmbutton {
+    display: flex;
+    flex-direction: row;
+    gap: 500px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}

@@ -42,6 +42,8 @@
 import { renderLandingPage } from './LandingPage';
 import { renderElectionPage } from './ElectionPage';
 import { renderDashboardPage } from './DashboardPage';
+import { renderDetailvotePage } from './DetailvotePage';
+import { renderHasilvotePage } from './HasilvotePage';
 
 
 class App {
@@ -61,10 +63,16 @@ class App {
         renderLandingPage(this.#navigate.bind(this)); // Berikan fungsi navigasi ke LandingPage
         break;
       case 'election-page':
-        renderElectionPage();
+        renderElectionPage(this.#navigate.bind(this));
         break;
       case 'dashboard-page':
-        renderDashboardPage();
+        renderDashboardPage(this.#navigate.bind(this));
+        break;
+      case 'detail-page':
+        renderDetailvotePage(this.#navigate.bind(this));
+        break;
+      case 'hasil-page':
+        renderHasilvotePage(this.#navigate.bind(this));
         break;
       default:
         renderLandingPage(this.#navigate.bind(this));
@@ -72,10 +80,5 @@ class App {
   }
 }
 
-// Ekspor App dan fungsi navigate
-export const navigate = (page) => {
-  const app = new App();
-  app.navigate(page);
-};
 
 export default App;
